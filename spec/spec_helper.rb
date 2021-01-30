@@ -3,7 +3,6 @@
 require 'bundler/setup'
 require 'shopify_countries'
 require 'active_record'
-require 'shopify_countries/validators/validates_shopify_country_of'
 require 'pry'
 
 RSpec.configure do |config|

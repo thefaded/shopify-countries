@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'shopify_countries/version'
+require 'active_record'
+require 'shopify_countries/validators/validates_shopify_country_of'
 require 'json'
 
 module ShopifyCountries
