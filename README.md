@@ -1,8 +1,6 @@
 # ShopifyCountries
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shopify_countries`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Gem provides list of Shopify's countries and ActiveModel validator `validates_shopify_country_of`.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently it provides only few public methods:
+
+```ruby
+    ShopifyCountries.find_by_name("United States")
+    ShopifyCountries.find_by_code("GB")
+    ShopifyCountries.option_list # to get options for HTML select
+    ShopifyCountries.countries # or alias `all`
+```
+
+### Validator
+
+Just add `validates_shopify_country_of :country_code` to your ActiveModel class, by default it will search country
+by country code, if you want to specify another attribe, use `find_by` option - `validates_shopify_country_of :country, { find_by: 'name' }`
 
 ## Development
 
@@ -32,5 +42,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/shopify_countries.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/thefaded/shopify_countries.
