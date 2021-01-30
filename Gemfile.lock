@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    shopify_countries (0.1.0)
+    shopify_countries (0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -80,4 +80,4 @@ DEPENDENCIES
   standard
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
